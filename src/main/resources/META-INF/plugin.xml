@@ -1,0 +1,20 @@
+<idea-plugin>
+    <id>com.xue.vardict</id>
+    <name>VarDictHover</name>
+    <version>1.0</version>
+    <vendor email="test@test.com" url="https://example.com">self</vendor>
+
+    <description>
+        读取本地自定义txt词典文件，在Java标识符的快速文档弹窗中展示对应的中文释义，方便快速识别变量与方法的业务含义。
+    </description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <lang.documentationProvider
+                language="JAVA"
+                implementationClass="com.xue.vardict.DictDocumentationProvider"
+                order="first"/>
+    </extensions>
+</idea-plugin>
